@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="First Suite">
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+    <parameter name="Username" value="Admin"/>
+    <parameter name="Password" value="admin123"/>
+    <test name="Test1">
+        <classes>
+            <class name="OrangeHRMAdminFlow">
+                <methods>
+                <include name="Browser"/>
+                <include name="LunchTheWebSait"/>
+                <include name="VerifyLogIn"/>
+                <include name="adminField"/>
+                <include name="allCheckMarks"/>
+                <include name="tearDown"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test2">
+        <classes>
+            <class name="OrangeHRMPim">
+                <methods>
+                    <include name="Browser"/>
+                    <include name="LunchTheWebSait"/>
+                    <include name="addEmployee"/>
+                    <include name="tearDown"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test3">
+        <classes>
+            <class name="OrangeHRMLeave">
+                <methods>
+                    <include name="Browser"/>
+                    <include name="LunchTheWebSait"/>
+                    <include name="employeeSearch"/>
+                    <include name="tearDown"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
